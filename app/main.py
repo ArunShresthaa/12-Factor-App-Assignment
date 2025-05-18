@@ -8,7 +8,7 @@ app = FastAPI()
 app.include_router(calc_router, prefix="/calc")
 
 
-@app.get("/healthz")
+@app.get("/health")
 def health_check():
     return {"status": "ok"}
 

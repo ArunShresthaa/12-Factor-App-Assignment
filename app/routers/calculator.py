@@ -15,6 +15,16 @@ def add(data: Operands):
     return {"result": data.a + data.b}
 
 
+@router.post('/sub')
+def subtract(data: Operands):
+    return {"result": data.a - data.b}
+
+
+@router.post('/mul')
+def multiply(data: Operands):
+    return {"result": data.a * data.b}
+
+
 @router.post("/div")
 def divide(data: Operands):
     if data.b == 0:
